@@ -1,28 +1,37 @@
+import { 
+  createBrowserRouter, 
+  RouterProvider,
+} from 'react-router-dom';
 import './App.css';
+import Cabecalho from './comum/componentes/Cabecalho/Cabecalho';
+import Rodape from './comum/componentes/Rodape/Rodape';
+import PaginaInicial from './paginas/PaginaInicial/PaginaInicial';
+import ListaProdutos from './paginas/ListaProdutos/ListaProdutos';
+import ExercicioUm from './paginas/ExercicioUm/ExercicioUm';
+
+const router = createBrowserRouter ([
+  {
+    path: '',
+    element: <PaginaInicial />
+  },
+  {
+    path: 'lista-produtos',
+    element: <ListaProdutos />
+  },
+  {
+    path: 'exercicio-um',
+    element: <ExercicioUm />
+  },
+]);
 
 function App() {
-
-  function adivinhar() {
-    let num = Math.ceil(Math.random()*10);
-    let palpite = Number(prompt('Chute um número'));
-
-      if(num < 1  && num > 10){
-        alert('Digite um número entre 1 e 10');
-      } else if(palpite === num){
-        alert('Acertou!')
-      }else{
-        alert('Errou!')
-      }
-
-    console.log(num);
-  }
-
   return (
     <>
-      <h1>Exercicio 2</h1>
-      <button onClick={adivinhar}>Adivinhe</button>
+    <Cabecalho />
+    <RouterProvider router={router} />
+    <Rodape />
     </>
-  )
+  );
 }
 
 export default App
