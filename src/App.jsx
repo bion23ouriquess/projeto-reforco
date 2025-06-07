@@ -8,6 +8,7 @@ import Rodape from './comum/componentes/Rodape/Rodape';
 import PaginaInicial from './paginas/PaginaInicial/PaginaInicial';
 import ListaProdutos from './paginas/ListaProdutos/ListaProdutos';
 import ExercicioUm from './paginas/ExercicioUm/ExercicioUm';
+import ExercicioDois from './paginas/ExercicioDois/ExercicioDois';
 
 const router = createBrowserRouter ([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter ([
   {
     path: 'exercicio-um',
     element: <ExercicioUm />
+  },
+  {
+    path: 'exercicio-dois',
+    element: <ExercicioDois />
   },
 ]);
 

@@ -16,8 +16,8 @@ const PaginaInicial = () => {
                 Exercício Um
             </BotaoCustomizado>
 
-            <BotaoCustomizado cor="padrao" aoClicar={() => alert("Clicou no botão")}>
-                Botão Padrão
+            <BotaoCustomizado cor="padrao" aoClicar={() => navigate("exercicio-dois")}>
+                Exercicio Dois
             </BotaoCustomizado>
         </Principal>
     )
